@@ -10,12 +10,10 @@
 
 .footer {
     bottom: 0;
-    
     width: 100%;
-    background-color: var(--extra-light);
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);
 }
-
-
 
 .footer_container {
     display: grid;
@@ -61,7 +59,7 @@
     overflow: hidden;
 }
 
-.footer_bar::before{
+.footer_bar::before {
     position: absolute;
     content: "";
     top: 50%;
@@ -70,4 +68,42 @@
     width: 20rem;
     height: 2px;
     background-color: var(--text-light);
+}
+
+@media(width < 900px) {
+
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(width < 600px) {   
+    .footer_container {
+        gap: 2rem;
+    }
+    
+.footer {
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.footer_col h3 {
+    font-size: 1rem;
+
+}
+
+.footer_col h4 {
+    font-size: 1rem;
+}
+
+.footer_col p {
+    margin-bottom: 0.5rem;
+}
+
+.footer_col p:hover {
+    color: var(--text-dark);
+}
+
 }

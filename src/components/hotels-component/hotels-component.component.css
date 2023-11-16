@@ -150,3 +150,27 @@ body {
     background-color: var(--primary-color-dark);
 }
 
+@media (width < 900px) {
+
+    .popular_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .client_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+}
+
+@media (width < 600px) {
+
+    .popular_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .client_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
